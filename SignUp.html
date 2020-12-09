@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">SignUp Form</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	<style>
+	.box{
+		  
+		width: 420px;
+		height: 420px;
+		background-color:lightblue;
+		top: 40%;
+		left: 50%;
+		padding: 30px
+	}
+	
+	</style>
+	<script language="JavaScript" type="text/javaScript">
+
+	
+	function validate()
+	{		
+		if(document.regForm.password.value!=document.regForm.confirm_password.value)
+		{
+				error = document.getElementById("confirm_password")
+				error.innerHTML="Password doesn't match"
+				error.style.color="red"
+				document.regForm.confirm_password.focus();
+				return false;		
+		}
+		
+		if (!document.regForm.acctType[0].checked && !document.regForm.acctType[1].checked)
+		{
+			alert("Please choose Account Type");
+			return false;
+		}
+
+		return true;
+
+	}
+	
+		function letternumber(event)
+		{
+			var keychar;
+				
+			keychar = event.key;
+			
+			
+			// alphas and numbers
+			if (((".+-0123456789").indexOf(keychar) > -1))
+			return true;
+			else
+			return false;
+		}
+	</script>
+		
+	</head>
+
+	<body>
+	
+	<div class = "bg-img">
+	<br/>
+	<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+			<h2 style="text-align:center"	><font color = "Red">Registration Form </font></h2>
+		<form class = "box" name="regForm" style = " margin-left: 60%; margin-right: 0%" method = "post" action = "SignUp" onsubmit="return validate()" >
+			<fieldset>
+			<legend><b><font color = "georgian">Personal Information</font></b></legend>
+			<table>
+							
+				<tr>
+					<td>
+					<b>Full Name: </b>  <input type="text" size="20" name="name" placeholder="  Full Name" required />
+					</td>
+					<td>
+					<b>Father's Name:</b>  <input  type="text" size="20" name="fname" placeholder="  Father's Name" required />
+					</td>
+				</tr>
+				<tr>
+					<td><b>Account Type:</b> </td>
+					<td>
+					<input type="radio" value="applicant" name="acctType"/> Applicant
+					<input type="radio" value="admin" name="acctType"/> Admin
+					</td>
+				</tr>
+				
+			</table>	
+			</fieldset>
+			
+			<br/>
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Contact Information</font><b></legend>
+			<table>
+				<tr>
+					<td>
+					Email:   <input type="text" size="20" name="email" placeholder="  Email" pattern= "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required /> <br/>
+					</td>
+					<td>
+					Phone Number   : <input type="text" size="20" name="phone" placeholder="  Phone Number" onkeypress="return letternumber(event)"	required /> <br/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+					City:   <input type="text" size="20" name="city" placeholder="  City" required /> <br/>
+					</td>
+					<td>
+					Province:  <input type="text" size="20" name="province" placeholder="  Province" required /> <br/>
+					</td>
+				</tr>
+				
+			
+			</table>
+			</fieldset>
+			
+			<br/>
+			
+			<fieldset>
+			<legend><b><font color = "georgian"> Account Information</font></b> </legend>
+			<table>
+				<tr>
+					<td>
+					Account #:  <input type = "text" size="20" name = "account_no" placeholder = "  Account #" onkeypress="return letternumber(event)" required />
+					</td>
+					<td>	
+					CNIC: <input type="text" size = "20" name="cnic" placeholder="  CNIC" onkeypress="return letternumber(event)" required />
+					</td>
+				<tr>
+					<td>
+					Password:<input type="password" name="password" placeholder="  Password" required /> <br/>
+					</td>
+					<td>
+					Confirm Password: <input type="password" name="confirm_password" placeholder="  Re-enter Password" onfocusout="return validate()" required /> <br/>
+					<div><p id="confirm_password"></p></div>
+					</td>
+				</tr>
+
+				</tr>
+			</table>
+			</fieldset>
+			<br/>
+			
+		<input type="submit"  value="Register" />	
+		<!--<button type = "submit" onclick = "return validation">Register</button>
+		-->
+		</form>
+	<br/><br/>
+	</div>
+	</body>
+</html>

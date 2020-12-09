@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">Deposit/Withdraw</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<script language="JavaScript" type="text/javaScript">			
+	
+	function validate()
+	{
+		if (!document.deposit.category[0].checked && !document.deposit.category[1].checked)
+		{
+			alert("Whether  you want to use deposit or withdraw");
+			return false;
+		}
+	return true;	
+	}
+	
+	function letternumber(event)
+	{
+		var keychar;
+			
+		keychar = event.key;
+		
+		
+		// alphas and numbers
+		if (((".+-0123456789").indexOf(keychar) > -1))
+		return true;
+		else
+		return false;
+	}
+	
+	</script>
+	<style>
+		.box{  
+			width: 420px;
+			height: 250px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">DEPOSIT OR WITHDRAW MONEY</font></h2>
+			<form action="DepositMoney" method="post" name = "deposit"class = "box" style = " margin-left: 60%; margin-right: 0%" >
+			
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Account Information</font></b></legend>
+			<br/>
+			<b>Account No. :</b> <input type="text" size = "45" name="account2" placeholder="Enter accout number where you want to deposit money"  onkeypress="return letternumber(event)" required ><br/><br/>
+			<b>Amount:</b> <input type="number" size = "45" name="balance" placeholder="Enter your Amount" required ><br/><br/>			
+			<b>Password:</b> <input type="password" size = "45" name="password" placeholder="Enter your Password" required ><br/><br/>
+			
+			<input type="radio" value="deposit" name="category"/> Deposit
+			<input type="radio" value="withdraw" name="category"/> Withdraw
+			</fieldset>
+			<br/>
+			<input type="submit" value="  Go  " />
+			</form>			
+	
+	</body>
+	
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">Deposit</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<script language="JavaScript" type="text/javaScript">			
+		
+	function letternumber(event)
+	{
+		var keychar;
+			
+		keychar = event.key;
+		
+		
+		// alphas and numbers
+		if (((".+-0123456789").indexOf(keychar) > -1))
+		return true;
+		else
+		return false;
+	}
+	
+	</script>
+	<style>
+		.box{  
+			width: 420px;
+			height: 190px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">SEARCH RECORD</font></h2>
+			<form action="Withdarw" method="post" class = "box" style = " margin-left: 60%; margin-right: 0%" >
+			
+			
+			<fieldset>
+			<br/>
+			<b>Account No. :</b> <input type="text" size = "45" name="account2" placeholder="Enter accout number where you want to search"  onkeypress="return letternumber(event)" required ><br/><br/>
+			<br/>
+			<input type="submit" value="Search" />
+			</form>			
+	
+	</body>
+	
+</html>

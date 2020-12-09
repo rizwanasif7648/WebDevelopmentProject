@@ -1,0 +1,22 @@
+input{
+	border: 0
+}
+input:focus{
+	background-color: #ddd;
+	border: 1
+
+}
+
+
+
+body{
+	background-image: url("background.jpg");
+	height:100%
+	width:100%
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+

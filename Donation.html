@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">Donation</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<style>
+		.box{  
+			width: 420px;
+			height: 220px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">Donation </font></h2>
+			<form action="Donation" method="post" class = "box" name="Transaction" style = " margin-left: 60%; margin-right: 0%" >
+			
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Account Information</font></b></legend>
+			<br/>
+			<b>Foundation's NAme :</b> <input type="text" size = "45" name="name" placeholder="Enter Foundation's Name"  onkeypress="return letternumber(event)" required ><br/><br/>
+			<b>Amount:</b> <input type="number" size = "45" name="balance" placeholder="Enter your Amount" required ><br/><br/>			
+			<b>Password:</b> <input type="password" size = "45" name="password" placeholder="Enter your Password" required ><br/><br/>
+
+			</fieldset>
+			<br/>
+			<input type="submit" value="Send" />
+			</form>			
+	
+	</body>
+	
+</html>

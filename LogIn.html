@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">LogIn</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<script language="JavaScript" type="text/javaScript">			
+		function validate()
+		{
+			if (!document.LogIn.acctType[0].checked && !document.LogIn.acctType[1].checked)
+			{
+				alert("Please choose Account Type");
+				return false;
+			}
+			return true
+		}
+		
+		function letternumber(event)
+		{
+			var keychar;
+				
+			keychar = event.key;
+			
+			
+			// alphas and numbers
+			if (((".+-0123456789").indexOf(keychar) > -1))
+			return true;
+			else
+			return false;
+		}
+	</script>
+	<style>
+		.box{  
+			width: 420px;
+			height: 190px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">Log In </font></h2>
+			<form action="LogIn" method="post" class = "box" name="LogIn" style = " margin-left: 60%; margin-right: 0%" onsubmit="return validate()" >
+			
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Log In Credentials</font></b></legend>
+			<b>CNIC:</b> <input type="text" size = "45" name="cnic" placeholder="CNIC"  onkeypress="return letternumber(event)" CNIC" required ><br/><br/>
+			<b>Password:</b> <input type="password" size = "45" name="password" placeholder="  Password" required ><br/><br/>
+			<b>Account Type:</b>
+			<input type="radio" value="applicant" name="acctType"/> Applicant
+			<input type="radio" value="admin" name="acctType"/> Admin
+			<br/>
+			</fieldset>
+			<br/>
+			<input type="submit" value="Log In" />
+			</form>			
+	
+	</body>
+	
+</html>

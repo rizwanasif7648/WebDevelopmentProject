@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">Transaction</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<script language="JavaScript" type="text/javaScript">			
+		
+	function letternumber(event)
+	{
+		var keychar;
+			
+		keychar = event.key;
+		
+		
+		// alphas and numbers
+		if (((".+-0123456789").indexOf(keychar) > -1))
+		return true;
+		else
+		return false;
+	}
+	
+	</script>
+	<style>
+		.box{  
+			width: 420px;
+			height: 220px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">Transaction </font></h2>
+			<form action="Transaction" method="post" class = "box" name="Transaction" style = " margin-left: 60%; margin-right: 0%" >
+			
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Account Information</font></b></legend>
+			<br/>
+			<b>Account No. :</b> <input type="text" size = "45" name="account2" placeholder="Enter accout number where you want to send money"  onkeypress="return letternumber(event)" required ><br/><br/>
+			<b>Amount:</b> <input type="number" size = "45" name="balance" placeholder="Enter your Amount" required ><br/><br/>			
+			<b>Password:</b> <input type="password" size = "45" name="password" placeholder="Enter your Password" required ><br/><br/>
+
+			</fieldset>
+			<br/>
+			<input type="submit" value="Send" />
+			</form>			
+	
+	</body>
+	
+</html>

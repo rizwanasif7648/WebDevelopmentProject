@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+
+	<servlet>
+		<servlet-name>SignUp</servlet-name>
+		<servlet-class>SignUp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SignUp</servlet-name>
+		<url-pattern>/SignUp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Transaction</servlet-name>
+		<servlet-class>Transaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Transaction</servlet-name>
+		<url-pattern>/Transaction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TransactionDetails</servlet-name>
+		<servlet-class>TransactionDetails</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TransactionDetails</servlet-name>
+		<url-pattern>/TransactionDetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateProfile</servlet-name>
+		<servlet-class>UpdateProfile</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateProfile</servlet-name>
+		<url-pattern>/UpdateProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogIn</servlet-name>
+		<servlet-class>LogIn</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogIn</servlet-name>
+		<url-pattern>/LogIn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogOut</servlet-name>
+		<servlet-class>LogOut</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogOut</servlet-name>
+		<url-pattern>/LogOut</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DepositMoney</servlet-name>
+		<servlet-class>DepositMoney</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DepositMoney</servlet-name>
+		<url-pattern>/DepositMoney</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>Register</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Donation</servlet-name>
+		<servlet-class>Donation</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Donation</servlet-name>
+		<url-pattern>/Donation</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

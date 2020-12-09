@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title name="title">ApplicantsDetail</title>
+	
+	<link rel="stylesheet" type="text/CSS" href="style.css"/>
+	
+	<script language="JavaScript" type="text/javaScript">			
+	
+	function letternumber(event)
+	{
+		var keychar;
+			
+		keychar = event.key;
+		
+		
+		// alphas and numbers
+		if (((".+-0123456789").indexOf(keychar) > -1))
+		return true;
+		else
+		return false;
+	}
+	
+	</script>
+	<style>
+		.box{  
+			width: 420px;
+			height: 150px;
+			background-color:lightblue;
+			top: 40%;
+			left: 50%;
+			padding: 30px
+		}
+	</style>
+	</head>
+	<body>
+	
+	<!--<div class = "bg-img">-->
+		<br/>
+		<br/>
+		<h1 style="text-align:center"><font color = "Blue">ONLINE BANKING SYSTEM </font></h1>
+		<h2 style="text-align:center"	><font color = "Red">ApplicantsDetail</font></h2>
+			<form action = "ApplicantsDetail.jsp" method = "post" name = "deposit"class = "box" style = " margin-left: 60%; margin-right: 0%" >
+			
+			
+			<fieldset>
+			<legend><b><font color = "georgian">Account Information</font></b></legend>
+			<br/>
+			<b>Account No. :</b> <input type="text" size = "45" name="account2" placeholder="Enter accout number to search"  onkeypress="return letternumber(event)" required ><br/><br/>
+			</fieldset>
+			<br/>
+			<button>Filter</button>
+			</form>			
+	
+	</body>
+	
+</html>
